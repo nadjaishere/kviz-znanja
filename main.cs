@@ -184,13 +184,11 @@ namespace projekat2godina1
             Console.Write("*");
             Console.SetCursorPosition(0, poz + 1);
             TimeSpan odgovor = ispis-DateTime.Now;
-            TimeSpan vreme = new TimeSpan(0,0,0,6);
-            if (odgovor < vreme)
-            {
-                broj_poena = 5;
-            }
-            else
-                broj_poena = 0;
+            TimeSpan vreme1 = new TimeSpan(0, 0, 0, 10);
+            TimeSpan vreme2 = new TimeSpan(0, 0, 0, 13);
+            TimeSpan vreme3 = new TimeSpan(0, 0, 0, 16);
+            TimeSpan vreme4 = new TimeSpan(0, 0, 0, 19);
+            TimeSpan vreme5 = new TimeSpan(0, 0, 0, 21);
             if (kursorY == pitanja[indeks_kategorije].indeks_tacnog_odg[brPitanja] - 1)
             {
                 Console.BackgroundColor = ConsoleColor.Green;
@@ -198,7 +196,20 @@ namespace projekat2godina1
                 Console.WriteLine("Tacno!");
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.ForegroundColor = ConsoleColor.White;
+                if (odgovor < vreme1)
+                    broj_poena = 10;
+                else if (odgovor < vreme2)
+                    broj_poena = 9;
+                else if (odgovor < vreme3)
+                    broj_poena = 8;
+                else if (odgovor < vreme4)
+                    broj_poena = 7;
+                else if (odgovor < vreme5)
+                    broj_poena = 6;
+                else
+                    broj_poena = 5;
                 return true;
+                
             }
             else
             {
@@ -215,6 +226,7 @@ namespace projekat2godina1
                 Console.WriteLine("Netacno! Tacan odgovor je bio " + pitanja[indeks_kategorije].indeks_tacnog_odg[brPitanja] + ". " + tacanOdg);
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.ForegroundColor = ConsoleColor.White;
+                broj_poena = 0;
                 return false;
             }
         }
@@ -303,6 +315,7 @@ namespace projekat2godina1
         {
             StreamWriter datoteka = new StreamWriter(ime_datoteke + ".txt",true);
             datoteka.WriteLine(ime_datoteke+"|"+ime+"|"+prezime+"|"+broj_bodova);
+            datoteka.Close();
 
         }
         public static void Main(string[] args)
@@ -333,8 +346,14 @@ namespace projekat2godina1
             "razno"
             };
                 Console.WriteLine("KVIZ ZNANJA");
+                Console.WriteLine("Unesite ime i prezime razdvojene jednim razmakom:");
+                string s = Console.ReadLine();
+                string[] ime_prezime = s.Split(' ');
+                string ime = ime_prezime[0];
+                string prezime = ime_prezime[1];
                 Console.WriteLine("Izaberite kategoriju:");
                 int broj_poena = 0;
+                int ukupno_poena = 0;
                 int katego = IspisIIzborKategorije(kategorije);
                 string izborkategorije = kategorije[katego];
                 int broj_kategorije = IndeksKategorije(izborkategorije, kategorije);
@@ -354,7 +373,7 @@ namespace projekat2godina1
                 for (int i = 0; i < 10; i++)
                 {
                     IspisPitanja(kat, random_pitanja_indeksi[i], broj_kategorije-1, kategorije, out izlaz,out broj_poena);
-                    Console.WriteLine(broj_poena);
+                    ukupno_poena += broj_poena;
                     if (izlaz == true)
                     {
                         korisnik_izlaz = false;
@@ -362,6 +381,7 @@ namespace projekat2godina1
                     }
 
                 }
+                PoeniKorisnika("rezultati", ime, prezime, ukupno_poena);
             }
 
         }
