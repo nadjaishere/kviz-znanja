@@ -117,9 +117,9 @@ namespace projekat2godina1
             kat[broj_kategorije].indeks_tacnog_odg = new int[kat[broj_kategorije].brojpitanja];
             while (!ulaz.EndOfStream)
             {
-                Console.WriteLine(brojac_pitanja+"|"+ime_kategorije);
                 string s = ulaz.ReadLine();
                 string[] red = s.Split('|');
+                Console.WriteLine(ime_kategorije+"|"+brojac_pitanja);
                 kat[broj_kategorije].pitanje[brojac_pitanja] = red[0];
                 kat[broj_kategorije].odgovor1[brojac_pitanja] = red[1];
                 kat[broj_kategorije].odgovor2[brojac_pitanja] = red[2];
@@ -169,10 +169,11 @@ namespace projekat2godina1
             return false;
         }
         //izmenjena metoda
-        static bool IspisPitanja(Pitanja[] pitanja, int brPitanja, int indeks_kategorije, string[] kategorije, out bool izlaz)
+        static bool IspisPitanja(Pitanja[] pitanja, int brPitanja, int indeks_kategorije, string[] kategorije, out bool izlaz,out int broj_poena)
         {
             var s = Console.ReadKey();
             izlaz = PrekidKvizaKorisnik(s, kategorije, pitanja);
+            DateTime ispis=DateTime.Now;
             Console.WriteLine(pitanja[indeks_kategorije].pitanje[brPitanja]);
             Console.WriteLine("[ ] {0}\n[ ] {1}\n[ ] {2}\n[ ] {3}", pitanja[indeks_kategorije].odgovor1[brPitanja],
             pitanja[indeks_kategorije].odgovor2[brPitanja], pitanja[indeks_kategorije].odgovor3[brPitanja],
@@ -182,6 +183,14 @@ namespace projekat2godina1
             PomerajKursora(0, 3, 0, 1);
             Console.Write("*");
             Console.SetCursorPosition(0, poz + 1);
+            TimeSpan odgovor = ispis-DateTime.Now;
+            TimeSpan vreme = new TimeSpan(0,0,0,6);
+            if (odgovor < vreme)
+            {
+                broj_poena = 5;
+            }
+            else
+                broj_poena = 0;
             if (kursorY == pitanja[indeks_kategorije].indeks_tacnog_odg[brPitanja] - 1)
             {
                 Console.BackgroundColor = ConsoleColor.Green;
@@ -281,7 +290,6 @@ namespace projekat2godina1
             StreamWriter broj_pitanja = new StreamWriter(ime_datoteke + ".txt");
             for (int i = 0; i < 20; i++)
             {
-                Console.WriteLine(kat[i].brojpitanja);
                 if (i != 19)
                     broj_pitanja.Write(kat[i].brojpitanja + "|");
                 
@@ -289,6 +297,12 @@ namespace projekat2godina1
                     broj_pitanja.Write(kat[i].brojpitanja);
             }
             broj_pitanja.Close();
+
+        }
+        static void PoeniKorisnika(string ime_datoteke,string ime,string prezime,int broj_bodova)
+        {
+            StreamWriter datoteka = new StreamWriter(ime_datoteke + ".txt",true);
+            datoteka.WriteLine(ime_datoteke+"|"+ime+"|"+prezime+"|"+broj_bodova);
 
         }
         public static void Main(string[] args)
@@ -299,11 +313,11 @@ namespace projekat2godina1
                 string[] kategorije = {
             "geografija",
             "filmovi",
-            "moda",
+            "muzika",
             "sport",
             "istorija",
             "poreklo reci",
-            "strana muzika",
+            "moda",
             "domaca muzika",
             "zivotinje",
             "igrice",
@@ -320,6 +334,7 @@ namespace projekat2godina1
             };
                 Console.WriteLine("KVIZ ZNANJA");
                 Console.WriteLine("Izaberite kategoriju:");
+                int broj_poena = 0;
                 int katego = IspisIIzborKategorije(kategorije);
                 string izborkategorije = kategorije[katego];
                 int broj_kategorije = IndeksKategorije(izborkategorije, kategorije);
@@ -330,7 +345,7 @@ namespace projekat2godina1
                 Random rnd = new Random();
                 for (int i = 0; i < 10; i++)
                 {
-                    random_pitanja_indeksi[i] = rnd.Next(1, kat[broj_kategorije].brojpitanja);
+                    random_pitanja_indeksi[i] = rnd.Next(1, kat[broj_kategorije].brojpitanja-1);
                     while (ProveraPonavljanjaPitanja(random_pitanja_indeksi[i], random_pitanja_indeksi) == false)
                         random_pitanja_indeksi[i] = rnd.Next(1, kat[broj_kategorije].brojpitanja);
                 }
@@ -338,10 +353,10 @@ namespace projekat2godina1
                 bool izlaz = false;
                 for (int i = 0; i < 10; i++)
                 {
-                    IspisPitanja(kat, random_pitanja_indeksi[i], broj_kategorije-1, kategorije, out izlaz);
+                    IspisPitanja(kat, random_pitanja_indeksi[i], broj_kategorije-1, kategorije, out izlaz,out broj_poena);
+                    Console.WriteLine(broj_poena);
                     if (izlaz == true)
                     {
-                        Console.WriteLine(3);
                         korisnik_izlaz = false;
                         return;
                     }
