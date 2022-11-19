@@ -63,6 +63,54 @@ namespace projekat2godina1
             while (true);
         }
         //
+        private static void UnosPitanjaIzDatoteke1(string ime_kategorije, int broj_kategorije, Pitanja[] kat)
+        {
+            Array.Resize(ref kat[broj_kategorije].indeks_tacnog_odg, kat[broj_kategorije].brojpitanja);
+            UnosPitanjaIzDatoteke(ime_kategorije, broj_kategorije, kat);
+        }
+        //
+        static void UnosPitanjaIzDatoteke(string ime_kategorije, int broj_kategorije, Pitanja[] kat)
+        {
+            BrojPitanjaPoKattegorijama("pitanja", kat);
+            int brojac_pitanja = 0;
+            StreamReader ulaz = new StreamReader(ime_kategorije + ".txt");
+            kat[broj_kategorije].pitanje = new string[kat[broj_kategorije].brojpitanja];
+            kat[broj_kategorije].odgovor1 = new string[kat[broj_kategorije].brojpitanja];
+            kat[broj_kategorije].odgovor2 = new string[kat[broj_kategorije].brojpitanja];
+            kat[broj_kategorije].odgovor3 = new string[kat[broj_kategorije].brojpitanja];
+            kat[broj_kategorije].odgovor4 = new string[kat[broj_kategorije].brojpitanja];
+            kat[broj_kategorije].indeks_tacnog_odg = new int[kat[broj_kategorije].brojpitanja];
+            while (!ulaz.EndOfStream)
+            {
+                string s = ulaz.ReadLine();
+                string[] red = s.Split('|');
+                kat[broj_kategorije].pitanje[brojac_pitanja] = red[0];
+                kat[broj_kategorije].odgovor1[brojac_pitanja] = red[1];
+                kat[broj_kategorije].odgovor2[brojac_pitanja] = red[2];
+                kat[broj_kategorije].odgovor3[brojac_pitanja] = red[3];
+                kat[broj_kategorije].odgovor4[brojac_pitanja] = red[4];
+                kat[broj_kategorije].indeks_tacnog_odg[brojac_pitanja] = Convert.ToInt32(red[5]);
+                brojac_pitanja++;
+            }
+            Console.WriteLine(ime_kategorije + "|" + brojac_pitanja);
+            ulaz.Close();
+        }
+        //
+        //
+        static bool PrekidKvizaKorisnik(ConsoleKeyInfo x, string[] kategorije, Pitanja[] kat)
+        {
+            if (x.Key == ConsoleKey.Escape)
+            {
+                return true;
+            }
+            else if (x.Key == ConsoleKey.Home)
+            {
+                UpisPitanja(kategorije, kat);
+                for (int i = 0; i < 20; i++)
+                    UnosPitanjaIzDatoteke(kategorije[i], i, kat);
+            }
+            return false;
+        }
         static void UpisPitanja(string[] kategorije, Pitanja[] kat)
         {
             Console.WriteLine("Koliko pitanja zelite da unesete?");
@@ -98,54 +146,45 @@ namespace projekat2godina1
             }
         }
         //
-        private static void UnosPitanjaIzDatoteke1(string ime_kategorije, int broj_kategorije, Pitanja[] kat)
+        static void BrojPitanjaPoKattegorijama(string ime_datoteke, Pitanja[] kat)
         {
-            Array.Resize(ref kat[broj_kategorije].indeks_tacnog_odg, kat[broj_kategorije].brojpitanja);
-            UnosPitanjaIzDatoteke(ime_kategorije, broj_kategorije, kat);
-        }
-        //
-        static void UnosPitanjaIzDatoteke(string ime_kategorije, int broj_kategorije, Pitanja[] kat)
-        {
-            BrojPitanjaPoKattegorijama("pitanja", kat);
-            int brojac_pitanja = 0;
-            StreamReader ulaz = new StreamReader(ime_kategorije + ".txt");
-            kat[broj_kategorije].pitanje = new string[kat[broj_kategorije].brojpitanja];
-            kat[broj_kategorije].odgovor1 = new string[kat[broj_kategorije].brojpitanja];
-            kat[broj_kategorije].odgovor2 = new string[kat[broj_kategorije].brojpitanja];
-            kat[broj_kategorije].odgovor3 = new string[kat[broj_kategorije].brojpitanja];
-            kat[broj_kategorije].odgovor4 = new string[kat[broj_kategorije].brojpitanja];
-            kat[broj_kategorije].indeks_tacnog_odg = new int[kat[broj_kategorije].brojpitanja];
-            while (!ulaz.EndOfStream)
+            StreamReader broj_pitanja = new StreamReader(ime_datoteke + ".txt");
+            int br = 0;
+            while (!broj_pitanja.EndOfStream)
             {
-                string s = ulaz.ReadLine();
+                string s = broj_pitanja.ReadLine();
                 string[] red = s.Split('|');
-                Console.WriteLine(ime_kategorije+"|"+brojac_pitanja);
-                kat[broj_kategorije].pitanje[brojac_pitanja] = red[0];
-                kat[broj_kategorije].odgovor1[brojac_pitanja] = red[1];
-                kat[broj_kategorije].odgovor2[brojac_pitanja] = red[2];
-                kat[broj_kategorije].odgovor3[brojac_pitanja] = red[3];
-                kat[broj_kategorije].odgovor4[brojac_pitanja] = red[4];
-                kat[broj_kategorije].indeks_tacnog_odg[brojac_pitanja] = Convert.ToInt32(red[5]);
-                brojac_pitanja++;
+                for (int i = 0; i < red.Length; i++)
+                {
+                    kat[i].brojpitanja = Convert.ToInt32(red[i]);
+                }
+                br++;
             }
-            ulaz.Close();
+            broj_pitanja.Close();
         }
-        //
-        //
-        //
-        static bool PrekidKvizaKorisnik(ConsoleKeyInfo x, string[] kategorije, Pitanja[] kat)
+        static void PromenaBrojaPitanja(string ime_datoteke, int indeks_kategorije, Pitanja[] kat)
         {
-            if (x.Key == ConsoleKey.Escape)
+            StreamReader br = new StreamReader(ime_datoteke + ".txt");
+            string[] red;
+            while (!br.EndOfStream)
             {
-                return true;
+                string s = br.ReadLine();
+                red = s.Split('|');
+                red[indeks_kategorije - 1] = Convert.ToString(kat[indeks_kategorije - 1].brojpitanja);
+
             }
-            else if (x.Key == ConsoleKey.Home)
+            br.Close();
+            StreamWriter broj_pitanja = new StreamWriter(ime_datoteke + ".txt");
+            for (int i = 0; i < 20; i++)
             {
-                UpisPitanja(kategorije, kat);
-                for (int i = 0; i < 20; i++)
-                    UnosPitanjaIzDatoteke(kategorije[i], i, kat);
+                if (i != 19)
+                    broj_pitanja.Write(kat[i].brojpitanja + "|");
+
+                else
+                    broj_pitanja.Write(kat[i].brojpitanja);
             }
-            return false;
+            broj_pitanja.Close();
+
         }
         //
         static int IndeksKategorije(string kategorija, string[] kategorije)
@@ -159,14 +198,27 @@ namespace projekat2godina1
             return indeks_kategorije;
         }
         //
-        static bool ProveraPonavljanjaPitanja(int broj_pitanja, int[] brojevi_pitanja)
+        static bool ProveraPonavljanjaPitanja(int broj_pitanja, int[] brojevi_pitanja,int indeks_broja_pitanja_u_nizu)
         {
             for (int i = 0; i < brojevi_pitanja.Length; i++)
             {
-                if (broj_pitanja == brojevi_pitanja[i])
+                if (broj_pitanja == brojevi_pitanja[i]&&indeks_broja_pitanja_u_nizu!=i)
+                {
                     return true;
+                }
+                    
             }
             return false;
+        }
+        static void IspisNiza(int[] niz)
+        {
+            for (int i = 0; i < niz.Length; i++)
+            {
+                if(i==niz.Length-1)
+                    Console.WriteLine(niz[1]);
+                else
+                    Console.Write(niz[1]);
+            }
         }
         //izmenjena metoda
         static bool IspisPitanja(Pitanja[] pitanja, int brPitanja, int indeks_kategorije, string[] kategorije, out bool izlaz,out int broj_poena)
@@ -271,46 +323,7 @@ namespace projekat2godina1
                 izlaz.WriteLine(niz[j].ime + "|" + niz[j].brpoena);
             izlaz.Close();
         }
-        static void BrojPitanjaPoKattegorijama(string ime_datoteke, Pitanja[] kat)
-        {
-            StreamReader broj_pitanja = new StreamReader(ime_datoteke + ".txt");
-            int br = 0;
-            while (!broj_pitanja.EndOfStream)
-            {
-                string s = broj_pitanja.ReadLine();
-                string[] red = s.Split('|');
-                for (int i = 0; i < red.Length; i++)
-                {
-                    kat[i].brojpitanja = Convert.ToInt32(red[i]);
-                }
-                br++;
-            }
-            broj_pitanja.Close();
-        }
-        static void PromenaBrojaPitanja(string ime_datoteke, int indeks_kategorije, Pitanja[] kat)
-        {
-            StreamReader br=new StreamReader(ime_datoteke + ".txt");
-            string[] red;
-            while (!br.EndOfStream)
-            {
-                string s = br.ReadLine();
-                red = s.Split('|');
-                red[indeks_kategorije-1] = Convert.ToString(kat[indeks_kategorije-1].brojpitanja);
-
-            }
-            br.Close();
-            StreamWriter broj_pitanja = new StreamWriter(ime_datoteke + ".txt");
-            for (int i = 0; i < 20; i++)
-            {
-                if (i != 19)
-                    broj_pitanja.Write(kat[i].brojpitanja + "|");
-                
-                else
-                    broj_pitanja.Write(kat[i].brojpitanja);
-            }
-            broj_pitanja.Close();
-
-        }
+        
         static void PoeniKorisnika(string ime_datoteke,string ime,string prezime,int broj_bodova)
         {
             StreamWriter datoteka = new StreamWriter(ime_datoteke + ".txt",true);
@@ -361,12 +374,17 @@ namespace projekat2godina1
                 UnosPitanjaIzDatoteke(izborkategorije, broj_kategorije-1, kat);
                 //izbor random pitanja iz kategorije
                 int[] random_pitanja_indeksi = new int[10];
+                int random_broj;
                 Random rnd = new Random();
                 for (int i = 0; i < 10; i++)
                 {
-                    random_pitanja_indeksi[i] = rnd.Next(1, kat[broj_kategorije].brojpitanja-1);
-                    while (ProveraPonavljanjaPitanja(random_pitanja_indeksi[i], random_pitanja_indeksi) == false)
-                        random_pitanja_indeksi[i] = rnd.Next(1, kat[broj_kategorije].brojpitanja);
+                    random_pitanja_indeksi[i] = rnd.Next(0, kat[broj_kategorije].brojpitanja-1);
+                    Console.WriteLine(random_pitanja_indeksi[i]+"*");
+                    while (ProveraPonavljanjaPitanja(random_pitanja_indeksi[i], random_pitanja_indeksi,i) == true)
+                    {
+                        random_broj = rnd.Next(0, kat[broj_kategorije].brojpitanja - 1);
+                        random_pitanja_indeksi[i] = random_broj;
+                    }
                 }
                 Console.Clear();
                 bool izlaz = false;
