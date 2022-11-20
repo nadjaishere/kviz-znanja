@@ -96,7 +96,7 @@ using System.Threading.Tasks;
             else if (x.Key == ConsoleKey.Home)
             {
                 UpisPitanja(kategorije, kat);
-                for (int i = 0; i < 7; i++)
+                for (int i = 0; i < 12; i++)
                     UnosPitanjaIzDatoteke(kategorije[i], i, kat);
             }
             return false;
@@ -172,9 +172,9 @@ using System.Threading.Tasks;
             }
             br.Close();
             StreamWriter broj_pitanja = new StreamWriter(ime_datoteke + ".txt");
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 12; i++)
             {
-                if (i != 6)
+                if (i != 11)
                     broj_pitanja.Write(kat[i].brojpitanja + "|");
 
                 else
@@ -187,7 +187,7 @@ using System.Threading.Tasks;
         static int IndeksKategorije(string kategorija, string[] kategorije)
         {
             int indeks_kategorije = 0;
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 12; i++)
             {
                 if (kategorija == kategorije[i])
                     indeks_kategorije = i + 1;
@@ -206,16 +206,6 @@ using System.Threading.Tasks;
 
             }
             return false;
-        }
-        static void IspisNiza(int[] niz)
-        {
-            for (int i = 0; i < niz.Length; i++)
-            {
-                if (i == niz.Length - 1)
-                    Console.WriteLine(niz[1]);
-                else
-                    Console.Write(niz[1]);
-            }
         }
         //izmenjena metoda
         static bool IspisPitanja(Pitanja[] pitanja, int brPitanja, int indeks_kategorije, string[] kategorije, out bool izlaz, out int broj_poena)
@@ -280,8 +270,8 @@ using System.Threading.Tasks;
         {
             for (int i = 0; i < kategorije.Length; i++)
                 Console.WriteLine("[ ]" + kategorije[i]);
-            Console.SetCursorPosition(1, Console.CursorTop - 7);
-            PomerajKursora(0, 6, 0, 1);
+            Console.SetCursorPosition(1, Console.CursorTop - 12);
+            PomerajKursora(0, 11, 0, 1);
             return kursorY;
         }
         //
@@ -346,7 +336,11 @@ using System.Threading.Tasks;
             "istorija",
             "biologija",
             "opsteznanje",
-              
+            "hrana",
+            "zivotinje",
+            "nauka",
+            "mitologija",
+            "razno"
             };
                 Console.WriteLine("KVIZ ZNANJA");
                 Console.WriteLine("Unesite ime i prezime :");

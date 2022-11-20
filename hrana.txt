@@ -3,20 +3,20 @@ Paelja je nacionalno jelo koje zemlje?|Grčke|Španije|Argentine|Portugalije|2
 Gulaš je nacionalno jelo koje zemlje?|Srbije|Španije|Mađarske|Austrije|3
 Koji lik iz crtanog filma je jeo spanać pre nego što postane super snažan?|Atom mrav|Patak dača|Ptica Trkačica|Mornar Popaj|4
 Šta su gambori?|Vrsta račića|Vrsta riba|Vrsta salate|Vrsta pečuraka|1
-Šta su Tartufi?|Vrsta riba|Vrsta pečuraka|Vrsta salate|Vrsta sosa|2
+Šta su tartufi?|Vrsta riba|Vrsta pečuraka|Vrsta salate|Vrsta sosa|2
 Koji deo biljke cimeta se koristi u ishrani?|Koren|Plod|Stablo|List|3
 Tortilje su nacionalno jelo koje zemlje?|Brazila|Španije|Argentine|Meksika|4
 Boršč čorba je nacionalno jelo koje zemlje?|Rusija|Mađarska|Turske|Finske|1
 Riba fugu u sebi sadrži otrov u kom organu?|Škrge|Jetra|Koža|Meso|2
 U kojoj državi se napravljena prva mašina za sladoled?|Engleska|Italija|Amerika|Kina|3
-Crepes suzette je vrsta...?|Sladoleda|Sosa|Salate|Palačinaka|4
+Crepes suzette je vrsta...|Sladoleda|Sosa|Salate|Palačinaka|4
 Odakle vodi poreklo kikiriki?|Evropa|Azija|Severna Amerika|Južna Amerika|4
 Odakle vodi poreklo kupus?|Evropa|Azija|Severna Amerika|Južna Amerika|1
 Koji deo karfiola se u ishrani najčešće koristi?|Koren|Plod|Cvet|List|3
 Jelo sa nazivom Dibari u sebi sadrži?|Kupus|Karfiol|Brokoli|Kelj|2
-Odakle potiče Ananas?|Afrika|Azija|Severna Amerika|Južna Amerika|4
-Iz koje države potiče dezert pod nazivom PAŠTELE (Pastel de nata)?|Španija|Argentina|Portugalija|Brazil|3
-Iz koje države potiče dezert pod nazivom TART?|Španija|Francuska|Velika Britanija|Brazil|2
+Odakle potiče ananas?|Afrika|Azija|Severna Amerika|Južna Amerika|4
+Iz koje države potiče dezert pod nazivom Paštele (Pastel de nata)?|Španija|Argentina|Portugalija|Brazil|3
+Iz koje države potiče dezert pod nazivom Tart?|Španija|Francuska|Velika Britanija|Brazil|2
 Koje boje je bešamel sos?|Bele|Crvene|Zelene|Braon|1
 Koja namirnica je najbogatija vitaminom C?|Limun|Kivi|Paprika|Nar|3
 Koja namirnica je najbogatija vitaminom B?|Jaja|Žitarice|Meso|Mahunarke|2
@@ -25,16 +25,16 @@ Koja namirnica je najbolji izvor kalcijuma?|Mleko|Pasulj|Spanać|Riba|1
 Koja namirnica je najbogatija vitaminom A?|Šargarepa|Spanać|Jetra|Losos|4
 Koja namirnica je najbogatija vitaminom D?|Riba|Jaja|Pečurke|Brokoli|1
 Šta je Brioš?|Vrsta ribe|Vrsta čorbe|Vrsta hleba|Vrsta sosa|3
-Gde je napravljena prva PIZZA?|Rim|Napulj|Firenza|Palermo|2
-Odakle potiče sir GORGONZOLA?|Francuska|Italija|Švajcarska|Amerika|2
-Odakle potiče sir EMENTALER?|Francuska|Italija|Švajcarska|Nemačka|3
-Odakle potiče sir ČEDAR?|Francuska|Italija|Švajcarska|Velika Britanija|4
-Odakle potiče sir GAUDA?|Holandija|Francuska|Italija|Švajcarska|1
-Odakle potiče supa GAZPACHO?|Portugalija|Španija|Brazi|Maroko|2
+Gde je napravljena prva pica?|Rim|Napulj|Firenza|Palermo|2
+Odakle potiče sir gorgonzola?|Francuska|Italija|Švajcarska|Amerika|2
+Odakle potiče sir ementaler?|Francuska|Italija|Švajcarska|Nemačka|3
+Odakle potiče sir čedar?|Francuska|Italija|Švajcarska|Velika Britanija|4
+Odakle potiče sir gauda?|Holandija|Francuska|Italija|Švajcarska|1
+Odakle potiče supa Gaspačo?|Portugalija|Španija|Brazi|Maroko|2
 U kom gradu su prvi put napravljeni "duvan čvarci"?|Subotica|Sombor|Vršac|Valjevo|4
-MAMALjUGA je rumunski naziv ja jedno naše jelo. Koje?|Paradjz sos|Popara|Kačamak|Griz|3
-Odakle potiče SACHER torta?|Beč|Salzburg|Graz|Bratislava|1
-Odakle potiče DOBOŠ torta?|Austrija|Mađarska|Češka|Srbija|2
-Odakle potiče ROCOCCO torta?|Francuska|Švajcarska|Italija|Belgija|1
+Mamaljuga je rumunski naziv ja jedno naše jelo. Koje?|Paradjz sos|Popara|Kačamak|Griz|3
+Odakle potiče Sacher torta?|Beč|Salzburg|Graz|Bratislava|1
+Odakle potiče Doboš torta?|Austrija|Mađarska|Češka|Srbija|2
+Odakle potiče Rococco torta?|Francuska|Švajcarska|Italija|Belgija|1
 U kojoj zemlji je proizvedena prva čokolada sa mlekom?|Francuska|Švajcarska|Italija|Belgija|2
 U kom veku je proizvedena prva čokolada sa mlekom?|XVII|XVIII|XIX|XX|3
