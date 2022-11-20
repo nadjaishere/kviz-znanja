@@ -1,0 +1,39 @@
+Šta je izumeo Robert Fulton?|Parnu mašinu|Parobrod|Parnu lokomotivu|Merač zvuka|2
+Ko je prvi napravio automobil?|Benc|Ford|Pežo|Reno|1
+Kolika je brzina prostiranja zvuka (u km/h)?|1000|1112|1224|1336|3
+Koliko inča sadrži merna jedinica stopa?|6|8|10|12|4
+Kolika je tačka ključanja vode, izražena u Farenhajtima?|100|132|273|212|4
+Ko j izumeo barometar?|Galvani|Toričeli|Bernuli|Amati|2
+Kom veku pripada pronalazak teleskopa?|XV|XVI|XVII|XVIII|3
+Koje nacije je izumitelj mašinice za šišanje?|Britanac|Amerikanac|Indijac|Srbin|4
+Šta se meri galvanometrom?|Potencijal|Jačina struje|Otpor|Provodljivost|2
+Koja se godina smatra rođenjem televizije?|1920|1924|1925|1928|3
+Kada je Mendeljejev osmislio periodni sistem hemijskih elemenata?|1859|1869|1879|1889|2
+Ko je pronalazač hidrogeneratora?|Nikola Tesla|Mihajlo Pupin|Mihailo Petrović Alas|Milutin Milanković|3
+Kada je Džejms Vat usavršio parnu mašinu?|1706|1756|1769|1776|3
+Koje godine je Bendžamin Frenklin izumeo gromobran?|1722|1752|1772|1782|2
+Ko je izumeo telegraf?|Berlic|Bel|Braj|Morze|4
+Ko je izumeo mikroskop?|Kodak|Nikon|Levenhuk|Cajs|3
+Pod kojim imenom je poznat zakon elektromagnetne indukcije?|Kulonov|Faradejev|Omov|Veberov|2
+Ko je pronalazač sijalice?|Bel|Tesla|Edison|Dejvi|3
+Ko je izumitelj radija?|Filips|Tesla|Morze|Markoni|2
+Kada je Marija Kiri dobila Nobelovu nagradu za hemiju?|1901|1903|1911|1913|3
+Ko je pronalazač penicilina?|Acetisal|Aspirin|Fleming|Koh|3
+Ko je pronalazač dinamita?|Rendgen|Bekerel|Nobel|Frenklin|3
+Ko je pronašao X zrake?|Rendgen|Bekerel|Kiri|Plank|1
+Ko je pronalazač radioaktivnosti?|Rendgen|Bekerel|Mendeljejev|Plank|2
+Ko je prvi izvršio proces vulkanizacije gume?|Gudjir|Mišelin|Bridžstoun|Danlop|1
+Ko je pronalazač žvakaće gume?|Sempl|Smit|Vrigli|Karnegi|1
+Ko je pronalazač kornfleks-a?|Morison|Nestle|Kelog|Smit|3
+Ko je bio prvi nosilac Nobelove nagrade za fiziku?|Rendgen|Kiri|Frenklin|Ajnštajn|1
+Ko je jedini dvostruki nobelovac za fiziku?|Ajnštajn|Bardin|Kiri|Herc|2
+Ko je dobio Nobelovu nagadu i za fiziku i za hemiju?|Rendgen|Kiri|Frenklin|Plank|2
+Kada je dodeljena prva Nobelova nagada za fiziku?|1895|1899|1901|1905|3
+Koja je jedinica za količinu naelektrisanja?|Volt|Kulon|Amper|Om|2
+Koja je jedinica za magnetnu indukciju?|Farad|Simens|Veber|Tesla|4
+Koja je jedinica za magnetni fluks?|Farad|Simens|Veber|Tesla|3
+Koja od navedenih jedinica nije u SI sistemu?|Metar|Kandela|Njutn|Amper|3
+Koji naučnik je prvi osmislio termometar?|Leonardo da Vinci|Isac Newton|Alessandro Volta|Galilleo Galilei|4
+Koji naučnik je postavio temelj kvantne mehanike?|Albert Einstein|Neils Bohr|Max Planck|Enrico Fermi|3
+Kada je Antoine-Laurent de Lavoisier formulisao zakon o održanju mase?|1744|1754|1764|1774|4
+Koji naučnik je konstruisao prvi mehanički sabirač i postavio osnov teorije verovatnoće?|Rene Descartes|Pierre Laplace|Blaise Pascal|Andre-Marrie Ampere|3

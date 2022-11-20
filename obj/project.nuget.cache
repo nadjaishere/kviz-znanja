@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9huzfiFUXEyIW8XPbdLG4H4/s3qPVPZAxENP40RA7NJH6NyzqF1QOhuJ6gSOvkUK/J8w2m5O91E275gj/nWVQQ==",
+  "dgSpecHash": "TghlDc2td/5u/yDfezrqMTFEk4shTr4IrQPCZT34LnfvJUrE3YL934qLT6Z/62R1rfDGAsfKocPULr6WEWACeQ==",
   "success": true,
-  "projectFilePath": "/home/runner/kviz-znanja/main.csproj",
+  "projectFilePath": "/home/runner/kvizznanja/main.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

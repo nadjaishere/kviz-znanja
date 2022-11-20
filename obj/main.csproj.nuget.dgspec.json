@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/runner/kviz-znanja/main.csproj": {}
+    "/home/runner/kvizznanja/main.csproj": {}
   },
   "projects": {
-    "/home/runner/kviz-znanja/main.csproj": {
+    "/home/runner/kvizznanja/main.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/runner/kviz-znanja/main.csproj",
+        "projectUniqueName": "/home/runner/kvizznanja/main.csproj",
         "projectName": "main",
-        "projectPath": "/home/runner/kviz-znanja/main.csproj",
+        "projectPath": "/home/runner/kvizznanja/main.csproj",
         "packagesPath": "/home/runner/.nuget/packages/",
-        "outputPath": "/home/runner/kviz-znanja/obj/",
+        "outputPath": "/home/runner/kvizznanja/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/runner/.nuget/NuGet/NuGet.Config"

@@ -1,0 +1,40 @@
+Koja je najbža kopnena životinja?|Tigar|Jaguar|Gepard|Lav|3
+Koja je najbrža riba na svetu?|Sabljarka|Crni Marlin|Tuna|Losos|2
+Koja je nabrža ptica na svetu?|Kolibri|Orao|Sivi soko|Lasta|3
+Koja ptica ima najveći raspon krila?|Pelikan|Albatros|Kondor|Roda|2
+Gde živi emu?|Evropa|Azija|Južna Amerika|Australija|4
+Gde živi koala?|Evropa|Azija|Južna Amerika|Australija|4
+Gde žive pande?|Evropa|Azija|Južna Amerika|Australija|2
+Gde živi aligator?|Severna Amerika|Afrika|Južna Amerika|Australija|1
+Gde ne žive krokodili?|Amerika|Afrika|Evropa|Azija|3
+Koja je najveća zmija na svetu?|Zlatni Piton|Afrički Piton|Mrežasti Piton|Anakonda|4
+Koja je najotrovnija zmija na svetu?|Kobra|Poskok|Crna Mamba|Tajpan|4
+Gde živi SMEĐI GRIZLI?|Aljaska|Kanada|SAD|Grenland|1
+Koji je najveći medved na svetu?|Kodijak|Polarni medved|Sibirski mrki|Smeđi grizli|1
+Kolika je maksimalna brzina antilope (u km/h)?|100|90|80|70|2
+Koja kopnena životinja ima najviši skok?|Kengur|Gepard|Puma|Tigar|2
+Koja kopnena životinja ima najduži skok?|Kengur|Gepard|Puma|Antilopa|1
+Izbaci uljeza?|Morski jež|Morska zvezda|Morski krastavac|Morska mahovina|4
+Izbaci uljeza?|Gazela|Zebra|Konj|Nosorog|1
+Kojoj grupi ptica pripada Noj?|Kokoši|Trkačice|Grabljivice|Plovuše|2
+Kojoj grupi ptica pripada Kondor?|Letačice|Trkačice|Grabljivice|Plovuše|3
+Kojoj grupi ptica pripada Tetreb?|Letačice|Kokoši|Grabljivice|Plovuše|2
+Kojoj grupi ptica pripada Drozd?|Letačice|Trkačice|Grabljivice|Pevačice|4
+Kojoj grupi životinja pripada hijena?|Biljojedi|Mesožderi|Svaštojedi|Strvinari|4
+Kojoj grupi životinja pripada svinja?|Biljojedi|Mesožderi|Svaštojedi|Strvinari|3
+Kojoj grupi životinja pripada slon?|Biljojedi|Mesožderi|Svaštojedi|Strvinari|1
+Kojoj grupi životinja pripada krtica?|Biljojedi|Bubojedi|Svaštojedi|Strvinari|2
+Kojoj grupi životinja pripada dabar?|Biljojedi|Mesožderi|Svaštojedi|Glodari|4
+Kojoj grupi životinja pripada koala?|Zveri|Papkari|Torbari|Glodari|3
+Izbaci uljeza?|Slavuji|Vrabac|Vrane|Čavke|1
+Izbaci uljeza?|Slavuji|Laste|Vrane|Rode|3
+Izbaci uljeza?|Poskok|Šarka|Kobra|Boa|4
+Koja životinja ubija zmije?|Mungos|Krtica|Soko|Mačka|1
+Koje ribe plivaju uzvodno radi mrešćenja?|Ohridska Pastrmka|Losos|Pirana|Moruna|2
+Kojoj grupi životinja pripada Bizon?|Goveda|Gazele|Ovce|Koze|1
+Kojoj grupi životinja pripada Muflon?|Goveda|Gazele|Ovce|Koze|3
+Kojoj grupi životinja pripada Tasmanijski đavo?|Biljojedi|Mesožderi|Svaštojedi|Strvinari|2
+Kojoj grupi životinja pripada Varan?|Riba|Vodozemac|Gmizavac|Ptica|3
+Koja je najotrovnija životinja na svetu?|Kobra|Škorpija|Zlatna žaba|riba Fugu|3
+Kojoj grupi životinja pripada Kormoran?|Riba|Vodozemac|Gmizavac|Ptica|4
+Kojoj grupi životinja pripada Šišmiš?|Sisar|Ptica|Gmizavac|Insekt|1
