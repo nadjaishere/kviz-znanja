@@ -212,6 +212,11 @@ using System.Threading.Tasks;
         {
             var s = Console.ReadKey();
             izlaz = PrekidKvizaKorisnik(s, kategorije, pitanja);
+          if(izlaz==true)
+          {
+            broj_poena=0;
+            return false;
+          }
             DateTime ispis = DateTime.Now;
             Console.WriteLine(pitanja[indeks_kategorije].pitanje[brPitanja]);
             Console.WriteLine("[ ] {0}\n[ ] {1}\n[ ] {2}\n[ ] {3}", pitanja[indeks_kategorije].odgovor1[brPitanja],
@@ -269,7 +274,14 @@ using System.Threading.Tasks;
         static int IspisIIzborKategorije(string[] kategorije)
         {
             for (int i = 0; i < kategorije.Length; i++)
-                Console.WriteLine("[ ]" + kategorije[i]);
+            {
+              if(i==6)
+                Console.WriteLine("[ ]" + "opste znanje");
+              else
+              Console.WriteLine("[ ]" + kategorije[i]);
+              
+            }
+                
             Console.SetCursorPosition(1, Console.CursorTop - 12);
             PomerajKursora(0, 11, 0, 1);
             return kursorY;

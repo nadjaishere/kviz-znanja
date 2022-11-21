@@ -1,0 +1,12 @@
+geografija|geografija.txt
+filmovi|filmovi.txt
+muzika|muzika.txt
+sport|sport.txt
+istorija|istorija.txt
+biologija|biologija.txt
+opste znanje|opsteznanje.txt
+hrana|hrana.txt
+zivotinje|zivotinje.txt
+nauka|nauka.txt
+mitologija|mitologija.txt
+razno|razno.txt
